@@ -22,8 +22,8 @@
                     </div>
                 </form>
                 <div class="flex items-center w-full sm:justify-end">
-                    <div class="hidden pl-2 space-x-1 md:flex">
-                       
+                    <div class="pl-2 space-x-1 md:flex">
+                        <i class="fas fa-trash text-white"></i>
                     </div>
                     <x-button wire:click="$emit('createBudgetType')" wire:loading.attr="disabled" class="disabled:opacity-25">
                         Add BudgetType
