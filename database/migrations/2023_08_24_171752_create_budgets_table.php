@@ -14,8 +14,13 @@ return new class extends Migration
         Schema::create('budgets', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->integer('unids')->nullable();
+            $table->double('valor')->default(0);
+            $table->unsignedBigInteger('expensetype_id');
             $table->boolean('isActive')->default(true);
             $table->timestamps();
+
+            $table->foreign('expensetype_id')->references('id')->on('expense_types')->onDelete('restrict');
         });
     }
 

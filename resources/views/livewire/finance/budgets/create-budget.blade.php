@@ -9,9 +9,21 @@
         <x-slot name="content">
             <div class="w-full flex flex-col gap-2">
                <div class="flex flex-col gap-2">
-                   <div class="w-full">
-                        <x-label value="Name" />
-                        <x-input type="text" class="w-full" wire:model="budget.name" />
+                    <div class="flex gap-2">
+                        <div class="w-1/4"> 
+                            <x-label value="Unids" />
+                            <x-input type="text" class="w-full"/>
+                            <x-input-error for='budgetType.name' />
+                        </div>
+                       <div class="w-full">
+                            <x-label value="Name" />
+                            <x-input type="text" class="w-full" wire:model="budget.name" />
+                            <x-input-error for='budget.name' />
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <x-label value="Precio estimado" />
+                        <x-input type="text" class="w-full"/>
                         <x-input-error for='budget.name' />
                     </div>
                </div>
